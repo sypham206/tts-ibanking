@@ -16,7 +16,7 @@ export default class accountsComponent extends React.Component {
         this.state = {
             listAccounts: null,
             loaded: false,
-            timeout: new Date().getTime() + 20 * 1000
+            timeout: new Date().getTime() + 10 * 1000
         }
         this.getDatabase = this.getDatabase.bind(this);
     }
@@ -67,14 +67,14 @@ export default class accountsComponent extends React.Component {
         if (new Date().getTime() > this.state.timeout || this.state.loaded == false) {
             // Cập nhật DB mới và khởi tạo lại timeout
             this.setState({
-                timeout: new Date().getTime() + 20 * 1000
+                timeout: new Date().getTime() + 10 * 1000
             });
             this.getDatabase();
         } else {
             // Chạy với mục đích dùng setState để chạy lại render()
             setTimeout(function () {
                 this.setState({loaded: true});
-            }.bind(this), 20 * 1000);
+            }.bind(this), 10 * 1000);
         }
 
         // Tải lên giao diện

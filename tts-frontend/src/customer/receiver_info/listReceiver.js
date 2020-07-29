@@ -27,6 +27,8 @@ export default class receiversComponent extends React.Component {
         super(props)
         this.state = {
             listReceivers: null,
+            loaded: false,
+            timeout: new Date().getTime() + 10 * 1000,
             nameReceiver2: '',
             numberReceiver: '1345',
             remindReceiver: '',

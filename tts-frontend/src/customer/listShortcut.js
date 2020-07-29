@@ -64,7 +64,7 @@ const listShortcut = () => {
       <br/>
       <Card style={{borderStyle: 'none'}}>
       <CardHeader style={{backgroundColor: 'coral'}}>
-          <strong>TTS iB@anking của tôi</strong>
+          <strong>TTS iB@nking của tôi</strong>
         </CardHeader>
         <CardBody style={{border: '1px solid', borderColor: 'coral'}}>
             <ListGroup style={{fontSize: '14px'}}>
